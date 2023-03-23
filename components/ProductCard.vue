@@ -1,13 +1,23 @@
 <template>
-  <div>
+  <div class="card text-center">
+   <img :src="product.image" :alt="product.title" class="thumb">
+   <!-- never forget to bind if the data is dynamic -->
+   <NuxtLink :to="`/products/${product.id}`">
+   <p class="btn my-4">View Details</p>
+   </NuxtLink>
 
   </div>
 </template>
 
 <script setup>
-const {product} = defineProps(['products'])
+const {product} = defineProps(['product'])
+console.log(product);
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.thumb {
+  max-height: 120px;
+  max-width: 70%;
+  margin: 0 auto;
+}
 </style>
