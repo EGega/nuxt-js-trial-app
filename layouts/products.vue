@@ -3,7 +3,8 @@
   <div>
    <header class="shadow-sm bg-white">
     <nav class="container mx-auto p-4">
-      <NuxtLink class="font-bold" to="/">Enea GEGA </NuxtLink>
+      <NuxtLink class="font-bold prev" @click.prevent="$router.back()" > Go Back</NuxtLink>
+      <!-- Here I used a fucntion to go to the previous page instead of goin to the homepage -->
     </nav>
    </header>
    <div class="container mx-auto p-4">
@@ -23,5 +24,8 @@
 <style scoped>
 .router-link-active{
   color: #3085db;
+}
+.prev {
+cursor: pointer;
 }
 </style>
