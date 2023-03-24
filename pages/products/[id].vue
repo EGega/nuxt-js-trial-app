@@ -17,8 +17,9 @@ const {data: product} = await useFetch(url)
 
 // This is how we throw an error in nuxt and this is how we send the status code and the 
 if(!product.value) {
-   throw createError({statusCode: 404, statusMessage: "Product not found"})
+   throw createError({statusCode: 404, statusMessage: "Product not found", fatal: true})
 }
+// The reason for fatal true is to force the error to be shown even when the error has been created in the browser and not from our application
 
 </script>
 
