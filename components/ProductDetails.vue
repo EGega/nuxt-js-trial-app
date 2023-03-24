@@ -9,6 +9,12 @@
         <p class="text-xl my-7"> Price - $ {{product.price}} </p>
         <h3 class="font-bold border-b-2 mb-4 pb-2"> Product Description </h3>
         <p class="mb-7"> {{product.description}} </p>
+        <!-- I have added Material UI icons so it will give us the icons -->
+        <!-- This is a way to add the icons -->
+        <button class="btn flex">
+          <i class="material-icons mr-2">add_shopping_cart</i>
+          <span>Add to cart</span>
+        </button>
       </div>
     </div>
   </div>

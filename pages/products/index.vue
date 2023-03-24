@@ -18,7 +18,13 @@ definePageMeta({
 // We use the useFetch to fetch the data and then we destructure the response
 const {data: {_rawValue: products}} = await useFetch('https://fakestoreapi.com/products')
 
-
+// We can overwrite the meta settings here seperately with useHead()
+useHead({
+  title:'Nuxt App | Merch',
+  meta: [
+    {name: 'description', content: "Nuxt 3 Merchandise"}
+  ]
+})
 </script>
 
 <style scoped>

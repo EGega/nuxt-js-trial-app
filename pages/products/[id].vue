@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Head>
+      <Title>Nuxt App | {{product.title}} </Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
+    <!-- We can use meta tags here too, and we can also use changeable content here too -->
   <ProductDetails :product="product" />
   </div>
 </template>
